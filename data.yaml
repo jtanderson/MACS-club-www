@@ -1,0 +1,39 @@
+execs:
+  presidents:
+    title: "President"
+    members:
+      - name: "Chloe VanCory"
+        email: "cvancory1@gulls.salisbury.edu"
+      - name: "Nathan DiMatteo"
+        email: "ndimatteo1@gulls.salisbury.edu"
+  vicepresidents:
+    title: "Vice President"
+    members:
+      - name: "Jacob Duncan"
+        email: "jduncan5@gulls.salisbury.edu"
+      - name: "Blaine Mason"
+        email: "bmason3@gulls.salisbury.edu"
+      - name: "Justin Ventura"
+        email: "jventura3@gulls.salisbury.edu"
+  treasurer:
+    title: "Treasurer"
+    members:
+      - name: "Willem Lucas"
+        email: "wlucas1@gulls.salisbury.edu"
+  secretary:
+    title: "Secretary"
+    members:
+      - name: "Grant Dawson"
+        email: "gdawson1@gulls.salisbury.edu"
+      - name: "Ryan Rosiak"
+        email: "rrosiak1@gulls.salisbury.edu"
+  historian:
+    title: "Historian"
+    members:
+      - name: "Hailey Lagimoniere"
+        email: "hlagimoniere1@gulls.salisbury.edu"
+
+meetings:
+  day: "Thursday"
+  time: "6-7pm"
+  location: "HS 101"

@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SU Math and Computer Science Club</title>
+    <meta name="description" content="Homepage of the SU MACS Club">
+    <meta name="author" content="Salisbury University">
+
+    <meta property="og:title" content="SU MACS Club">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://">
+    <meta property="og:description" content="Homepage of SU MACS Club">
+    <meta property="og:image" content="image.png">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  </head>
+  <body class="bg-gray-200 bg-opacity-70">
+    <div class="container mx-auto rounded-lg">
+      <div class="text-center text-6xl p-20 bg-yellow-300 bg-opacity-40">
+      SU Math and Computer Science Club!
+      </div>
+      <div class="text-center">
+        <div class="text-xl bg-red-800 bg-opacity-70">Upcoming Events</div>
+        <iframe src="https://calendar.google.com/calendar/embed?src=iipbo186001q2rp4cbp05tb980%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <div class="text-center text-2xl bg-red-800 bg-opacity-75 p-5">
+        Exec Board
+      </div>
+      <div class="grid grid-cols-2 gap-2 bg-red-800 bg-opacity-75 p-5">
+          {% for role in data.execs %}
+          <div>
+            <div class="text-lg">{{ data.execs[role].title }}</div>
+            {% for person in data.execs[role].members %}
+              <div><b>{{ person.name }}</b></div>
+              <div>{{ person.email }}</div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
+
